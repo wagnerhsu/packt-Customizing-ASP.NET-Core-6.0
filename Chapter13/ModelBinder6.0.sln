@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelBinderSample", "ModelBinderSample6.0\ModelBinderSample.csproj", "{A7A5D5C0-59B4-4C10-8487-1A61A84C98BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7A5D5C0-59B4-4C10-8487-1A61A84C98BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7A5D5C0-59B4-4C10-8487-1A61A84C98BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7A5D5C0-59B4-4C10-8487-1A61A84C98BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7A5D5C0-59B4-4C10-8487-1A61A84C98BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
