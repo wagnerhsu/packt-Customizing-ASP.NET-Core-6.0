@@ -1,7 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @using AuthSample.Data
-@inject SignInManager<WebAppUser> SignInManager
-@inject UserManager<WebAppUser> UserManager
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
 @{
  var user = await @UserManager.GetUserAsync(User);
 }
