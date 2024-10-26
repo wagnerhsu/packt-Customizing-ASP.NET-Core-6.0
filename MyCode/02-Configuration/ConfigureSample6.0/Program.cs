@@ -23,6 +23,7 @@ builder.Configuration.AddEnvironmentVariables();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
+builder.Services.Configure<RemoteTcpServerSettings>(builder.Configuration.GetSection("RemoteTcpServerSettings"));
 
 
 var app = builder.Build();
