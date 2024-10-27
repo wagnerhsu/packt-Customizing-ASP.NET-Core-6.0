@@ -32,7 +32,7 @@ public class HomeController : Controller
     {
         ViewData["Message"] = _options.Bar;
         _remoteTcpServerSettings.Dump(nameof(RemoteTcpServerSettings));
-        _configuration.GetValue<AppSettings>("AppSettings").Dump(nameof(AppSettings));
+        _configuration.GetValue<AppSettings>("AppSettings").Dump("GetValue<AppSettings>");
         _configuration.GetValue<int>("AppSettings:Foo").Dump("AppSettings:Foo");
         _configuration.GetSection("AppSettings").Get<AppSettings>().Dump(nameof(AppSettings));
         return View();
