@@ -12,13 +12,18 @@ public class HomeController : Controller
     private readonly AppSettings _options;
     private readonly RemoteTcpServerSettings _remoteTcpServerSettings;
     private readonly ILogger<HomeController> _logger;
-
+    private readonly IConfiguration _configuration;
 
     public HomeController(
-        IOptions<AppSettings> options, IOptions<RemoteTcpServerSettings> remoteTcpServerSettings, ILogger<HomeController> logger)
+        IOptions<AppSettings> options,
+        IOptions<RemoteTcpServerSettings> remoteTcpServerSettings,
+        ILogger<HomeController> logger,
+        IConfiguration configuration)
     {
         _options = options.Value;
-        this._logger = logger;
+        _logger = logger;
+        _configuration = configuration;
+
         _remoteTcpServerSettings = remoteTcpServerSettings.Value;
 
     }
@@ -27,6 +32,9 @@ public class HomeController : Controller
     {
         ViewData["Message"] = _options.Bar;
         _remoteTcpServerSettings.Dump(nameof(RemoteTcpServerSettings));
+        _configuration.GetValue<AppSettings>("AppSettings").Dump(nameof(AppSettings));
+        _configuration.GetValue<int>("AppSettings:Foo").Dump("AppSettings:Foo");
+        _configuration.GetSection("AppSettings").Get<AppSettings>().Dump(nameof(AppSettings));
         return View();
     }
 
